@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pizza Order</title>
+  <link rel="stylesheet" href="special offers.css" />
+ 
+</head>
+<body>
+
+<div class="overlay">
+  <div class="popup-box">
+
+    <!-- Step 1: Pizza Selection -->
+    <div class="step step-1 active">
+      <h2>Select Your Pizza 🍕</h2>
+      <div class="pizza-list">
+        <div class="pizza-item">
+          <span>Margherita</span>
+          <div class="qty-box">
+            <button onclick="changeQty('margherita', -1)">–</button>
+            <span id="margherita">0</span>
+            <button onclick="changeQty('margherita', 1)">+</button>
+          </div>
+        </div>
+        <div class="pizza-item">
+          <span>Veggie Supreme</span>
+          <div class="qty-box">
+            <button onclick="changeQty('veggie', -1)">–</button>
+            <span id="veggie">0</span>
+            <button onclick="changeQty('veggie', 1)">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="btn-row">
+        <button class="next-btn" onclick="showStep(2)">Next</button>
+      </div>
+    </div>
+
+    <!-- Step 2: Customize Toppings -->
+    <div class="step step-2">
+      <h2>Customize Your Pizza 🍄</h2>
+      <p>Select up to 4 toppings</p>
+      <div class="toppings">
+        <label><input type="checkbox" onchange="limitToppings(this)"> Cheese</label>
+        <label><input type="checkbox" onchange="limitToppings(this)"> Jalapeño</label>
+        <label><input type="checkbox" onchange="limitToppings(this)"> Mushroom</label>
+        <label><input type="checkbox" onchange="limitToppings(this)"> Onion</label>
+        <label><input type="checkbox" onchange="limitToppings(this)"> Chicken</label>
+        <label><input type="checkbox" onchange="limitToppings(this)"> Paneer</label>
+      </div>
+      <div class="btn-row">
+        <button onclick="showStep(1)">Back</button>
+        <button onclick="showStep(3)">Next</button>
+      </div>
+    </div>
+
+    <!-- Step 3: Special Request -->
+    <div class="step step-3">
+      <h2>Special Request 📝</h2>
+      <textarea placeholder="Write any cooking instructions..."></textarea>
+      <div class="btn-row">
+        <button onclick="showStep(2)">Back</button>
+     <a href="cart.html" class="button-link">Add to Cart</a>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const steps = document.querySelectorAll('.step');
+  const qty = { margherita: 0, veggie: 0 };
+
+  function showStep(n) {
+    steps.forEach((step, i) => {
+      step.classList.toggle('active', i === n - 1);
+    });
+  }
+
+  function changeQty(id, delta) {
+    if (!qty[id]) qty[id] = 0;
+    qty[id] += delta;
+    if (qty[id] < 0) qty[id] = 0;
+    document.getElementById(id).textContent = qty[id];
+  }
+
+  function limitToppings(checkbox) {
+    const checked = document.querySelectorAll('.toppings input:checked');
+    if (checked.length > 4) {
+      checkbox.checked = false;
+      alert("You can select up to 4 toppings only.");
+    }
+  }
+
+  function confirmOrder() {
+    window.location.href = "cart.html"; // 🔗 go to cart page
+  }
+</script>
+
+
+</body>
+</html>

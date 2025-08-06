@@ -1,0 +1,116 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ✅ NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #ffffff;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #FF7A00;
+}
+.logo span {
+  color: #2D2D2D;
+}
+.nav-links a {
+  margin: 0 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.navbar-actions button {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+.login-btn {
+  background: transparent;
+  border: 1px solid #FF7A00;
+  color: #FF7A00;
+}
+.signup-btn {
+  background: #FF7A00;
+  color: white;
+}
+
+.nav-auth-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.nav-btn {
+  background-color: black;  
+  color: white;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: black; 
+}
+
+/* ✅ Confirmation */
+.confirmation {
+  max-width: 600px;
+  margin: 4rem auto;
+}
+.confirm-icon {
+  width: 100px;
+  margin-bottom: 2rem;
+}
+.confirmation h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+.confirmation p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.order-details {
+  margin: 2rem 0;
+  font-size: 1rem;
+  color: #555;
+}
+.btn-home {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #FF7A00;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+.btn-home:hover {
+  background: #e56700;
+}

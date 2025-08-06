@@ -1,0 +1,532 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ✅ NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #ffffff;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #FF7A00;
+}
+.logo span {
+  color: #2D2D2D;
+}
+.nav-links a {
+  margin: 0 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.navbar-actions button {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+.login-btn {
+  background: transparent;
+  border: 1px solid #FF7A00;
+  color: #FF7A00;
+}
+.signup-btn {
+  background: #FF7A00;
+  color: white;
+}
+
+.nav-auth-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.nav-btn {
+  background-color: black;  
+  color: white;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: black; 
+}
+/* Banner */
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: url('./images/background.png') no-repeat center center/cover;
+  margin: 20px 0;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  color: white;
+  position: relative;
+  min-height: 360px;
+}
+
+/* Dark overlay so text is readable */
+.banner::before {
+  content: "";
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.banner-left, .banner-right {
+  position: relative; /* place above overlay */
+  z-index: 2;
+}
+
+/* Left side text */
+.banner-left h1 {
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.banner-left p {
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+}
+
+/* Buttons on left */
+.banner-buttons button {
+  background: #0b2f3a;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-right: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.banner-buttons button:hover {
+  background: #06513d;
+}
+
+/* Right side burger image */
+.banner-right {
+  width: 360px;
+  height: 361px;
+  position: relative;
+}
+
+.banner-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Discount tag on image */
+.discount-tag {
+  position: absolute;
+  top: 20px;
+  left: -10px;
+  background: orange;
+  color: white;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #fff;
+  padding: 20px;
+  color: #1a1a1a;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.search-bar {
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  background-color: #ff9900;
+  padding: 0.8rem 1rem;
+  overflow-x: auto;
+  border-radius: 8px;
+  margin-bottom: 100px;
+}
+
+.tab {
+  background: transparent;
+  border: none;
+  font-weight: bold;
+  color: white;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  border-radius: 999px;
+  transition: background 0.3s;
+}
+
+.tab.active,
+.tab:hover {
+  background: #000;
+  color: white;
+}
+
+.offers {
+  display: flex;
+  gap: 10rem;
+  overflow-x: auto;
+  margin-bottom: 30px;
+  justify-content: flex-start;
+  padding-left: 200px; /* 👈 Yeh line add karo ya badhao */
+}
+
+
+
+.offer-card {
+  position: relative;
+  width: 250px;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+ padding: 10px;
+  text-align: center;
+     box-sizing: border-box;
+       transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  text-align: center;
+}
+.offer-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #0e0e2c;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.offer-info {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  z-index: 2;
+}
+
+.offer-info .place {
+  font-size: 0.75rem;
+  color: #ffb600;
+}
+
+.offer-info h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+.plus-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  background: white;
+  color: black;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 28px;
+  z-index: 2;
+   transition: transform 0.3s ease;
+}
+
+.menu-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.menu-cards {
+  display: flex;
+  gap: 10rem;
+  overflow-x: auto;
+  justify-content: flex-start;
+  padding-left: 200px; /* 👈 Adjust this to shift slightly to center */
+   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 👈 transition added */
+  background: #fff;
+}
+
+
+
+.menu-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  position: relative;
+   transition: transform 0.3s ease, box-shadow 0.3s ease
+}
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.menu-card img {
+  width: 90px;
+  height: auto;
+  object-fit: contain;
+}
+
+.menu-text {
+  max-width: 180px;
+}
+
+.menu-text h3 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.menu-text p {
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.menu-text strong {
+  font-size: 0.9rem;
+  color: black;
+}
+
+.menu-card .plus-icon {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+@media (max-width: 768px) {
+  .offers {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-bar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .burger-cards {
+    flex-direction: column;
+  }
+
+  .burger-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 25px 20px;
+  margin-top: 40px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1 1 300px;
+}
+
+.delivery-info {
+  color: #333;
+}
+
+.contact-info {
+  color: #333;
+}
+
+.operational-times {
+  background: #0b2f3a;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Map Section */
+.map {
+  margin: 40px 0;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.map-info {
+  flex: 1 1 300px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.map-info h3 {
+  margin-bottom: 10px;
+}
+
+.map-info p, .map-info a {
+  margin-bottom: 8px;
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+
+.map iframe {
+  flex: 2 1 600px;
+  border-radius: 8px;
+  border: none;
+  height: 250px;
+}
+
+/* Reviews Section */
+.reviews {
+  margin-bottom: 40px;
+  background: white;
+  padding: 25px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.reviews h2 {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.reviews-wrapper {
+  display: flex;
+  align-items: center;
+  gap:
+ 20px;
+  flex-wrap: wrap;
+}
+
+/* restaurants */
+
+.popular-restaurants {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.restaurant-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  height: 250px;
+   justify-content: center;
+}
+
+.restaurant-item {
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.restaurant-item img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+.restaurant-item  p {
+
+  background-color: #FF7A00;
+  background: position 1px;;
+  margin-top: 20px;
+  font-size: 24px;
+  color: black;
+
+ 
+}
+.restaurant-item img p{
+  height: 15px;
+}
+
+.promo-image img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block; /* Extra space niche na aaye */
+}
